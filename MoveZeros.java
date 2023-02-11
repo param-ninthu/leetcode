@@ -16,3 +16,16 @@ Mysolution but it'll not fulfill all testcases.
 //         }
 //     }
 // }
+
+  int ball = 0 ;
+
+        for(int i =0 ; i<nums.length ; i++){
+            if(nums[i] ==0){
+                ball++;
+            }
+            else if(ball > 0){
+                int temp = nums[i];
+                nums[i]=0;
+                nums[i-ball] = temp;
+            }
+        }
